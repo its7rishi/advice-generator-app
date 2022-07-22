@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .divider {
+        background: url('./images/pattern-divider-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+          extend: {
+            colors: {
+              lightCyan: 'hsl(193, 38%, 86%)',
+              neonGreen: 'hsl(150, 100%, 66%)',
+              grayishBlue: 'hsl(217, 19%, 38%)',
+              darkGrayishBlue: 'hsl(217, 19%, 24%)',
+              darkBlue: 'hsl(218, 23%, 16%)',
+            },
+            boxShadow: {
+              '3xl': '0px 0px 40px rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body style="padding: 0; margin: 0; box-sizing: border-box">
+    <!-- Main Container -->
+    <div
+      class="h-screen w-screen bg-darkBlue flex flex-col justify-center px-1"
+    >
+      <!-- Advice Container -->
+      <div
+        class="relative w-80 h-80 mx-auto rounded-lg bg-darkGrayishBlue flex flex-col items-center justify-evenly px-2 pb-6 md:w-1/4 md:h-60"
+      >
+        <!-- Advice ID container -->
+        <div
+          class="w-full py-5 flex justify-center items-center text-neonGreen text-center text-sm font-sans tracking-wider"
+        >
+          <p>ADVICE #<span id="advice-id"></span></p>
+        </div>
+
+        <!-- Advice Text -->
+        <div class="px-2">
+          <h2
+            class="font-sans text-lightCyan text-[24px] text-center"
+            id="advice-text"
+          ></h2>
+        </div>
+
+        <!-- Pattern Divider -->
+        <div class="divider mb-6 mt-2">
+          <img src="./images/pattern-divider-mobile.svg" alt="" />
+        </div>
+
+        <!-- Button Container -->
+        <div
+          class="absolute flex justify-center items-center w-full -bottom-5 focus:outline-0"
+        >
+          <button
+            class="border border-neonGreen rounded-full p-3 bg-neonGreen focus:outline-0 active:shadow-3xl active:shadow-neonGreen"
+          >
+            <img src="./images/icon-dice.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+     Advice ID goes here
+    Advice # "Advice text goes here" 
+    -->
+
+    <div class="attribution text-white bg-darkBlue">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Saptarshi Majumdar</a>.
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
